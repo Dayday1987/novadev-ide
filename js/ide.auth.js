@@ -1,7 +1,6 @@
 // Js/ide.auth.js
 
 let supabase = null;
-r
 const NEXT_PUBLIC_SUPABASE_URL=https://zyispsfejdfyflpuahnr.supabase.co
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5aXNwc2ZlamRmeWZscHVhaG5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0MTIyNTQsImV4cCI6MjA4Njk4ODI1NH0.awxFlFo54MwGFYpgcHrRtrqEHjIFqJH5qmx5_Gp_Ju0";
 
