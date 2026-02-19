@@ -1,18 +1,15 @@
-// Js/ide.auth.js
+// js/ide.auth.js
 
 let supabase = null;
-const NEXT_PUBLIC_SUPABASE_URL=https://zyispsfejdfyflpuahnr.supabase.co
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5aXNwc2ZlamRmeWZscHVhaG5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0MTIyNTQsImV4cCI6MjA4Njk4ODI1NH0.awxFlFo54MwGFYpgcHrRtrqEHjIFqJH5qmx5_Gp_Ju0";
 
-export async function signInWithProvider(provider) {
-  return await supabase.auth.signInWithOAuth({
-    provider,
-    options: {
-      redirectTo: window.location.origin + window.location.pathname
-    }
-  });
-}
+const SUPABASE_URL = "https://zyispsfejdfyfluahnr.supabase.co";
+const SUPABASE_ANON_KEY = "YOUR_ANON_KEY_HERE"; // keep your real key here
 
+export function initAuth() {
+  supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
   return supabase;
 }
 
@@ -34,7 +31,10 @@ export async function getSession() {
 ============================== */
 
 export async function signUp(email, password) {
-  return await supabase.auth.signUp({ email, password });
+  return await supabase.auth.signUp({
+    email,
+    password
+  });
 }
 
 export async function signIn(email, password) {
@@ -56,8 +56,7 @@ export async function signInWithProvider(provider) {
   return await supabase.auth.signInWithOAuth({
     provider,
     options: {
-  redirectTo: window.location.origin + "/novadev-ide/"
-}
+      redirectTo: window.location.origin + window.location.pathname
     }
   });
 }
