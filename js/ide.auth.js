@@ -3,7 +3,7 @@
 let supabase = null;
 
 const SUPABASE_URL = "https://zyispsfejdfyfluahnr.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_ANON_KEY_HERE"; // keep your real key here
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5aXNwc2ZlamRmeWZscHVhaG5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0MTIyNTQsImV4cCI6MjA4Njk4ODI1NH0.awxFlFo54MwGFYpgcHrRtrqEHjIFqJH5qmx5_Gp_Ju0"; // keep your real key here
 
 export function initAuth() {
   supabase = window.supabase.createClient(
